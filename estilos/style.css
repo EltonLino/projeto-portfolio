@@ -123,3 +123,47 @@ article h2{
   margin-bottom: 15px;
   font-size: 1.2em;
 }
+
+#skill-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding: 10px;
+}
+
+#skill-container .info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#skill-container .nome{
+  font-weight: bold;
+  color: var(--texto);
+}
+
+#skill-container .porcent{
+  font-weight: bold;
+  color: var(--destaque);
+}
+
+#skill-container .barra{
+  width: 100%;
+  background-color: var(--fundo-principal);
+  height: 8px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+#skill-container .progresso{
+  height: 100%;
+  background-color: var(--destaque-inverso);
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  #skill-container {
+  grid-template-columns: 1fr 1fr;
+}
+  
+}
