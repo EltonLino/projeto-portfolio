@@ -92,6 +92,7 @@ section#ficha h1{
   text-align: center;
 }
 
+
 div#social{
   display: flex;
   justify-content: center;
@@ -159,6 +160,36 @@ article h2{
   height: 100%;
   background-color: var(--destaque-inverso);
   border-radius: 4px;
+}
+
+#formacao-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#formacao-container .curso{
+  background-color: var(--fundo-principal);
+  border-radius: 10px;
+  border-left: 5px solid var(--destaque-inverso);
+  padding: 10px;
+  transition: 0.5s;
+}
+
+#formacao-container .curso:hover {
+  border-left: 10px solid var(--destaque);
+  cursor: pointer;
+}
+
+#formacao-container .periodo {
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--texto);
+}
+
+#formacao-container .instituicao{
+  color: var(--destaque-inverso);
+  font-size: 1.2em;
 }
 
 @media screen and (min-width: 768px) {
