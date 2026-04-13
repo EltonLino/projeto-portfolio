@@ -24,7 +24,7 @@
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.5 em;
   background-color: var(--fundo-principal);
   color: var(--texto);
@@ -228,7 +228,6 @@ article h2 {
 
 #projeto-container .projeto:hover {
   border-left: 10px solid var(--destaque);
-  cursor: pointer;
 }
 
 #projeto-container .foto {
@@ -237,6 +236,15 @@ article h2 {
   object-fit: cover;
   overflow: hidden;
   border-radius: 10px;
+}
+
+summary{
+  padding: 10px;
+  color: var(--destaque);
+  font-weight: bold;
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.8em;
 }
 
 footer {
