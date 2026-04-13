@@ -21,11 +21,17 @@
   --destaque: #0077ff;
   --destaque-inverso: #66bbff;
   --fundo-card: #ffffff;
+  --fonte-titulo: "Poppins";
+  --fonte-texto: "Roboto", sans-serif;;
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  line-height: 1.5 em;
+  font-family: var(--fonte-texto);
+  line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
   transition: 1s;
@@ -92,8 +98,8 @@ section#ficha img.foto {
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid var(--fundo-card);
-  outline: 5px solid var(--destaque);
+  border: 3px solid var(--fundo-card);
+  outline: 3px solid var(--destaque);
   display: block;
   margin: auto;
   margin-bottom: 15px;
@@ -104,6 +110,7 @@ section#ficha h1 {
   margin: 15px 0;
   font-size: 2em;
   text-align: center;
+  padding-top: 10px;
 }
 
 section#detalhes {
@@ -117,6 +124,7 @@ div#social {
   font-size: 1.5em;
   gap: 1em;
   margin-top: 15px;
+  padding: 10px;
 }
 
 div#social a {
@@ -142,30 +150,42 @@ article h2 {
   font-size: 1.2em;
 }
 
-#skill-container {
+article p {
+  padding: 8px;
+  text-align: justify;
+}
+
+#hard-skill-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
   padding: 10px;
 }
 
-#skill-container .info {
+#soft-skill-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 10px;
+}
+
+#hard-skill-container .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#skill-container .nome {
+#hard-skill-container .nome {
   font-weight: bold;
   color: var(--texto);
 }
 
-#skill-container .porcent {
+#hard-skill-container .porcent {
   font-weight: bold;
   color: var(--destaque);
 }
 
-#skill-container .barra {
+#hard-skill-container .barra {
   width: 100%;
   background-color: var(--fundo-principal);
   height: 8px;
@@ -173,7 +193,7 @@ article h2 {
   margin-top: 5px;
 }
 
-#skill-container .progresso {
+#hard-skill-container .progresso {
   height: 100%;
   background-color: var(--destaque-inverso);
   border-radius: 4px;
@@ -270,9 +290,10 @@ footer {
     grid-column: 3 / 4;
   }
 
-  #skill-container {
+  #hard-skill-container {
     grid-template-columns: 1fr 1fr;
   }
+
 
   #projeto-container .projeto {
     flex-direction: row-reverse;
@@ -287,5 +308,11 @@ footer {
     aspect-ratio: 1/1;
     max-width: 20%;
     max-height: 200px;
+  }
+}
+
+@media screen and (min-width:1024px){
+    #soft-skill-container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
