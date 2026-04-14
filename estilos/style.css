@@ -158,14 +158,14 @@ article p {
 #hard-skill-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 10px;
   padding: 10px;
 }
 
 #soft-skill-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 10px;
   padding: 10px;
 }
 
@@ -215,7 +215,6 @@ article p {
 
 #formacao-container .curso:hover {
   border-left: 10px solid var(--destaque);
-  cursor: pointer;
 }
 
 #formacao-container .periodo {
@@ -227,6 +226,40 @@ article p {
 #formacao-container .instituicao {
   color: var(--destaque-inverso);
   font-size: 1.2em;
+}
+
+#curso-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  padding: 0;
+}
+
+#curso-container .titulacao a{
+  font-size: 1em;
+  padding: 2px;
+  text-decoration: none;
+}
+
+#curso-container .titulacao a:visited{
+color: var(--texto);
+}
+
+#curso-container .curso {
+  background-color: var(--fundo-principal);
+  border-radius: 10px;
+  border-left: 2px solid var(--destaque-inverso);
+  padding: 5px;
+  transition: 0.5s;
+}
+
+#curso-container .curso:hover {
+  border-left: 10px solid var(--destaque);
+}
+
+#curso-container .instituicao {
+  color: var(--destaque-inverso);
+  font-size: 1em;
 }
 
 #projeto-container {
