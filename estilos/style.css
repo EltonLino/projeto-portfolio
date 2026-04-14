@@ -165,8 +165,8 @@ article p {
 #soft-skill-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding: 10px;
+  gap: 5px;
+  padding: 5px;
 }
 
 #hard-skill-container .info {
@@ -302,11 +302,9 @@ color: var(--texto);
   gap: 10px;
 }
 
-/* From Uiverse.io by felipesntr */ 
 button {
   padding: 0.6em 1em;
   border: 2px solid var(--destaque-inverso);
-  width: 150px;
   transition: ease-in-out 0.6s;
   background-color: transparent;
   color: var(--destaque);
@@ -351,6 +349,10 @@ footer a {
   }
 
   #hard-skill-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #soft-skill-container {
     grid-template-columns: 1fr 1fr;
   }
 
