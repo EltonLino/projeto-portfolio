@@ -239,6 +239,9 @@ article p {
   font-size: 1em;
   padding: 2px;
   text-decoration: none;
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  font-weight: bold;
 }
 
 #curso-container .titulacao a:visited{
@@ -291,13 +294,28 @@ color: var(--texto);
   border-radius: 10px;
 }
 
-summary{
+.botao-container{
   padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+button{
+  padding: 5px;
+  border-radius: 10px;
+  font-family: var(--fonte-texto);
+  font-size: 1em;
+  border: 1px solid var(--destaque);
   color: var(--destaque);
-  font-weight: bold;
-  list-style: none;
   cursor: pointer;
-  font-size: 0.8em;
+}
+
+button:hover{
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  border: 1px solid var(--destaque-inverso);
+  transition: 1s;
 }
 
 footer {
