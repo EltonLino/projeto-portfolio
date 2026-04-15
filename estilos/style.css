@@ -357,7 +357,6 @@ footer a {
     grid-template-columns: 1fr 1fr;
   }
 
-
   #projeto-container .projeto {
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -380,6 +379,11 @@ footer a {
 
 @media screen and (min-width:1024px){
     #soft-skill-container {
-    grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+
+    #curso-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
   }
 }
