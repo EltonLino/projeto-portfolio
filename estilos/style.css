@@ -23,6 +23,10 @@
   --fundo-card: #ffffff;
   --fonte-titulo: "Poppins";
   --fonte-texto: "Roboto", sans-serif;;
+  /* Configuração para caixa de cursos (CSS-only) */
+  --curso-item-height: 64px; /* ajuste conforme necessário */
+  --curso-rows: 4; /* número de linhas visíveis antes de ativar rolagem */
+  --curso-gap: 10px;
 }
 
 h1, h2, h3 {
@@ -386,4 +390,40 @@ footer a {
       display: grid;
       grid-template-columns: 1fr 1fr;
   }
+}
+
+/* Caixa de rolagem somente via CSS
+   - Trava o article e permite rolagem interna no container quando exceder --curso-rows
+   - A barra fica oculta mas o scroll funciona via mouse/trackpad/touch
+*/
+article#cursos {
+  overflow: hidden; /* trava o article; rolagem só dentro do container */
+}
+
+#curso-container {
+  display: grid;
+  gap: var(--curso-gap);
+  max-height: calc((var(--curso-item-height) * var(--curso-rows)) + (var(--curso-gap) * (var(--curso-rows) - 1)));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+  padding-right: 8px;
+}
+
+#curso-container::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+#curso-container .curso {
+  min-height: var(--curso-item-height);
+  box-sizing: border-box;
+  /* permitir que itens maiores cresçam sem serem cortados */
+}
+
+#curso-container .titulacao a {
+  display: inline-block;
+  word-break: break-word;
 }
