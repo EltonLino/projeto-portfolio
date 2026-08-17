@@ -238,7 +238,7 @@ article p {
 
 #curso-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 10px;
   padding: 0;
 }
@@ -280,7 +280,7 @@ article#projetos {
 
 #projeto-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: var(--projeto-gap);
   max-height: calc((var(--projeto-item-height) * var(--projeto-rows)) + (var(--projeto-gap) * (var(--projeto-rows) - 1)));
   overflow-y: auto;
