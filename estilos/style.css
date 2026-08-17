@@ -22,11 +22,15 @@
   --destaque-inverso: #667dfd;
   --fundo-card: #ffffff;
   --fonte-titulo: "Poppins";
-  --fonte-texto: "Roboto", sans-serif;;
+  --fonte-texto: "Roboto", sans-serif;
   /* Configuração para caixa de cursos (CSS-only) */
   --curso-item-height: 64px; /* ajuste conforme necessário */
   --curso-rows: 4; /* número de linhas visíveis antes de ativar rolagem */
   --curso-gap: 10px;
+  /* Configuração para caixa de projetos (CSS-only) */
+  --projeto-item-height: 430px;
+  --projeto-rows: 4;
+  --projeto-gap: 20px;
 }
 
 h1, h2, h3 {
@@ -270,10 +274,26 @@ color: var(--texto);
   font-size: 1em;
 }
 
+article#projetos {
+  overflow: hidden;
+}
+
 #projeto-container {
   display: flex;
-  flex-direction: column-reverse;
-  gap: 20px;
+  flex-direction: column;
+  gap: var(--projeto-gap);
+  max-height: calc((var(--projeto-item-height) * var(--projeto-rows)) + (var(--projeto-gap) * (var(--projeto-rows) - 1)));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-right: 8px;
+}
+
+#projeto-container::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 #projeto-container .projeto {
@@ -285,6 +305,7 @@ color: var(--texto);
   border-radius: 10px;
   border-left: 5px solid var(--destaque-inverso);
   transition: 0.5s;
+  box-sizing: border-box;
 }
 
 #projeto-container .projeto:hover {
@@ -338,6 +359,10 @@ footer a {
 }
 
 @media screen and (min-width: 768px) {
+  :root {
+    --projeto-item-height: 240px;
+  }
+
   main {
     grid-template-columns: auto 300px 1fr auto;
   }
